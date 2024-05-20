@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "Sysfont";
+  src: url("/font/sysfont/sysfont.woff2") format("woff2"),
+    url("/font/sysfont/sysfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sysfont";
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0 20px 10px 0;
+  border: 5px solid black;
+  box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
+
+  height: calc(100vh - 15px);
+}
+
+header {
+  border-bottom: 5px solid black;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 10vh;
+}
+
+header > div {
+  height: 33px;
+  width: 33px;
+  border: 5px solid;
+  margin-left: 60px;
+}
+
+/* Element Selector */
+header > a > h1 {
+  margin-left: 100px;
+  background-color: white;
+  display: inline;
+  font-size: 3em;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+a:link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:active {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+nav {
+  padding: 0.5em;
+  font-size: 1.5em;
+  border-bottom: 5px solid black;
+  text-transform: uppercase;
+  height: 7vh;
+}
+
+nav > a {
+  margin-right: 1em;
+}
+
+#selected_tab {
+  text-decoration: underline;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: flex-start;
+  padding-top: 3%;
+  padding-right: 20%;
+  align-content: space-around;
+}
+
+figcaption > h3 {
+  /*
+    width: fit-content;
+    
+    */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+a figure {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+a figure img {
+  width: 50%;
+}
+
+/*
+article {
+    height: 26vh;
+    width: 10vw;
+    float: left;
+}
+
+
+main>nav>article {
+    margin: 2em 3.5em;
+}
+*/
+
+#profilepic {
+  width: 8em;
+}
+
+/*ver isto depois*/
+
+/* revisto */
+
+#contact_box {
+  border: 5px solid black;
+  margin: 10em auto;
+  width: 300px;
+
+  /*
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+    */
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+}
+
+#notes {
+  /*ver isto*/
+  width: 300px;
+}
+
+#contact_box h3 {
+  padding: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 5px solid black;
+}
+
+#contact_box address {
+  padding: 0.5em 1em;
+  border-bottom: 5px solid black;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+#contact_box address > p {
+  margin: 0.5em 0;
+  font-size: large;
+  font-style: normal;
+}
+
+/*
+main>section {
+    text-transform: uppercase;
+}
+*/
+
+/* Scrollbar styling */
+/*ver isto depois*/
+/*
+main {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-bottom: 5px solid black;
+}
+
+#horizontal_scrollbar {
+    position: absolute;
+    width: calc(100% - 4em);
+    height: 4em;
+    bottom: 0;
+    border-top: 5px solid black;
+}
+
+#vertical_scrollbar {
+    position: absolute;
+    height: calc(100% - 4em);
+    width: 4em;
+    right: 0;
+    top: 0;
+    border-left: 5px solid black;
+}
+
+#scrollbars img {
+    padding: 10px;
+}
+
+#squares {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4em;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+}
+
+#left_arrow,
+#right_arrow,
+#up_arrow,
+#down_arrow {
+    position: absolute;
+}
+
+#up_arrow,
+#down_arrow {
+    width: 100%;
+}
+
+#up_arrow {
+    top: 0;
+    border-bottom: 5px solid black;
+}
+
+#down_arrow {
+    bottom: 0;
+    border-top: 5px solid black;
+}
+
+#left_arrow,
+#right_arrow {
+    height: 100%;
+}
+
+#left_arrow {
+    left: 0;
+    border-right: 5px solid black;
+}
+
+#right_arrow {
+    right: 0;
+    border-left: 5px solid black;
+}
+*/
+
+#aboutme_box {
+  border: 5px solid black;
+  margin-left: 35em;
+  width: 378px;
+
+  /*
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+    */
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+}
+
+#aboutme_box > p {
+  padding: 0.5em 1em;
+  border-bottom: 5px solid black;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  margin: 0.5em 0;
+  font-size: large;
+  font-style: normal;
+}
