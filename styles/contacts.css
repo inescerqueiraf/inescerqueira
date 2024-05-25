@@ -1,0 +1,29 @@
+#contact_box {
+  border: 5px solid black;
+  margin: 10em auto;
+  width: 300px;
+
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+}
+
+#contact_box h3 {
+  padding: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 5px solid black;
+}
+
+#contact_box address {
+  padding: 0.5em 1em;
+  border-bottom: 5px solid black;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+#contact_box address > p {
+  margin: 0.5em 0;
+  font-size: large;
+  font-style: normal;
+}
