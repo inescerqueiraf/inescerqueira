@@ -49,9 +49,12 @@ title: unknown
     </header>
 
     <nav>
-      <a href="/projects" target="_self">work</a>
+      {%- for entry in collections.pages %}
+				 <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.data.title }}</a>
+      {%- endfor %}
+      <!-- <a href="/projects" target="_self">work</a>
       <a href="/about" target="_self">about me</a>
-      <a href="/contacts" target="_self">contacts</a>
+      <a href="/contacts" target="_self">contacts</a> -->
     </nav>
 
     <main>{{ content }}</main>
