@@ -12,6 +12,7 @@ title: unknown
     <meta name="author" content="inês cerqueira" />
     <title>inês's portfolio -- {{ title }}</title>
     <link rel="stylesheet" type="text/css" href="/bundle.css" />
+    <script src="/bundle.js"></script>
   </head>
 
   <body>
@@ -52,11 +53,10 @@ title: unknown
       {%- for entry in collections.pages %}
 				 <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.data.title }}</a>
       {%- endfor %}
-      <!-- <a href="/projects" target="_self">work</a>
-      <a href="/about" target="_self">about me</a>
-      <a href="/contacts" target="_self">contacts</a> -->
     </nav>
 
-    <main>{{ content }}</main>
+    <main class="overflow">
+        {{ content }}
+    </main>
   </body>
 </html>

@@ -5,4 +5,5 @@ module.exports = function (eleventyConfig) {
 
   // Watch targets
   eleventyConfig.addWatchTarget("./styles");
+  eleventyConfig.addWatchTarget("./scripts");
 };
