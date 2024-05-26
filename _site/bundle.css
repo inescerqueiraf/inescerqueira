@@ -289,13 +289,22 @@ main::-webkit-scrollbar-thumb {
   }
 
   address {
+    display: flex;
+    flex-direction: column;
     padding: 0.5em 1em;
     margin-bottom: 2px;
     text-transform: uppercase;
 
-    & > p {
-      margin: 0.5em 0;
+    & > a {
+      margin-top: 0.4em;
       font-style: normal;
+      width: fit-content;
+      border-bottom: 5px solid transparent;
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: 5px solid black;
+      }
     }
   }
 
