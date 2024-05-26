@@ -5,4 +5,11 @@ title: work
 date: 2024-05-23
 ---
 
-Projects
+<div class="projects-wrapper">
+  {% for project in collections.projects %}
+	<a class="icon" href="{{ project.url }}">
+		{% icon project.data.icon %}
+	  	<h2>{{ project.data.title }}</h2>
+	</a>
+  {% endfor %}
+</div>
