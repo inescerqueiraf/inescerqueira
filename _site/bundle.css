@@ -235,6 +235,7 @@ nav {
     &:visited {
       cursor: pointer;
       text-decoration: none;
+      border-bottom: 5px solid black;
     }
 
     &[aria-current="page"] {
