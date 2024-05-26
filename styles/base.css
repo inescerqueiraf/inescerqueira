@@ -18,18 +18,29 @@
 html {
   overflow-y: hidden;
   overflow-x: hidden;
+
+  --background-color: white;
+  --foreground-color: black;
+
+  &.dark-mode {
+    --background-color: blue;
+    --foreground-color: #f7ff5f;
+  }
 }
 
 body {
   margin: 20px 35px 0 20px;
-  border: 5px solid black;
-  box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
-  -webkit-box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
+  border: 5px solid var(--foreground-color);
+  box-shadow: 15px 10px 0px 0px var(--foreground-color);
+  -moz-box-shadow: 15px 10px 0px 0px var(--foreground-color);
+  -webkit-box-shadow: 15px 10px 0px 0px var(--foreground-color);
 
   height: calc(100vh - 45px);
   display: flex;
   flex-direction: column;
+
+  color: var(--foreground-color);
+  background-color: var(--background-color);
 }
 
 main {
@@ -64,23 +75,23 @@ main {
 }
 
 a:link {
-  color: rgb(0, 0, 0);
+  color: var(--foreground-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(0, 0, 0);
+  color: var(--foreground-color);
   text-decoration: underline;
   cursor: pointer;
 }
 
 a:active {
-  color: rgb(0, 0, 0);
+  color: var(--foreground-color);
   text-decoration: underline;
 }
 
 a:visited {
-  color: rgb(0, 0, 0);
+  color: var(--foreground-color);
   text-decoration: underline;
 }
 
@@ -143,16 +154,16 @@ main>nav>article {
 }
 
 #aboutme_box {
-  border: 5px solid black;
+  border: 5px solid var(--foreground-color);
   margin-left: 35em;
   width: 378px;
 
-  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 0px 0px var(--foreground-color);
 }
 
 #aboutme_box > p {
   padding: 0.5em 1em;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid var(--foreground-color);
   margin-bottom: 2px;
   text-transform: uppercase;
   margin: 0.5em 0;

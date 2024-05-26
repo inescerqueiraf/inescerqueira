@@ -18,18 +18,29 @@
 html {
   overflow-y: hidden;
   overflow-x: hidden;
+
+  --background-color: white;
+  --foreground-color: black;
+
+  &.dark-mode {
+    --background-color: blue;
+    --foreground-color: #f7ff5f;
+  }
 }
 
 body {
   margin: 20px 35px 0 20px;
-  border: 5px solid black;
-  box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
-  -webkit-box-shadow: 15px 10px 0px 0px rgba(0, 0, 0, 1);
+  border: 5px solid var(--foreground-color);
+  box-shadow: 15px 10px 0px 0px var(--foreground-color);
+  -moz-box-shadow: 15px 10px 0px 0px var(--foreground-color);
+  -webkit-box-shadow: 15px 10px 0px 0px var(--foreground-color);
 
   height: calc(100vh - 45px);
   display: flex;
   flex-direction: column;
+
+  color: var(--foreground-color);
+  background-color: var(--background-color);
 }
 
 main {
@@ -64,23 +75,23 @@ main {
 }
 
 a:link {
-  color: rgb(0, 0, 0);
+  color: var(--foreground-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(0, 0, 0);
+  color: var(--foreground-color);
   text-decoration: underline;
   cursor: pointer;
 }
 
 a:active {
-  color: rgb(0, 0, 0);
+  color: var(--foreground-color);
   text-decoration: underline;
 }
 
 a:visited {
-  color: rgb(0, 0, 0);
+  color: var(--foreground-color);
   text-decoration: underline;
 }
 
@@ -143,16 +154,16 @@ main>nav>article {
 }
 
 #aboutme_box {
-  border: 5px solid black;
+  border: 5px solid var(--foreground-color);
   margin-left: 35em;
   width: 378px;
 
-  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 0px 0px var(--foreground-color);
 }
 
 #aboutme_box > p {
   padding: 0.5em 1em;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid var(--foreground-color);
   margin-bottom: 2px;
   text-transform: uppercase;
   margin: 0.5em 0;
@@ -161,19 +172,19 @@ main>nav>article {
 }
 
 header {
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid var(--foreground-color);
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 6em;
 
-  div span {
+  & > div span {
     height: 5px;
-    background-color: black;
+    background-color: var(--foreground-color);
   }
 
-  div:nth-child(1) {
+  & > div:nth-child(1) {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -182,10 +193,53 @@ header {
     padding: 0 10px;
   }
 
-  div:nth-child(2) {
+  button {
+    background-color: var(--background-color);
     height: calc(80% - 10px);
-    border: 5px solid;
+    border: 5px solid var(--foreground-color);
     aspect-ratio: 1/1;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    span {
+      width: 100%;
+
+      &:first-child {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px;
+
+        div {
+          height: 5px;
+          width: 5px;
+          background-color: var(--foreground-color);
+        }
+      }
+
+      &:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div:first-child {
+          height: 5px;
+          width: 15px;
+          background-color: var(--foreground-color);
+        }
+
+        div:last-child {
+          height: 5px;
+          width: 25px;
+          border-right: 5px solid var(--foreground-color);
+          border-left: 5px solid var(--foreground-color);
+        }
+      }
+    }
   }
 
   div:nth-child(3) {
@@ -220,10 +274,28 @@ header {
   }
 }
 
+html.dark-mode {
+  header button span:last-child {
+    div:first-child {
+      height: 5px;
+      width: 25px;
+      border-right: 5px solid var(--foreground-color);
+      border-left: 5px solid var(--foreground-color);
+      background-color: var(--background-color);
+    }
+
+    div:last-child {
+      height: 5px;
+      width: 15px;
+      background-color: var(--foreground-color);
+    }
+  }
+}
+
 nav {
   padding: 0.5em;
   font-size: 2em;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid var(--foreground-color);
   text-transform: uppercase;
   height: fit-content;
 
@@ -235,18 +307,18 @@ nav {
     &:visited {
       cursor: pointer;
       text-decoration: none;
-      border-bottom: 5px solid black;
+      border-bottom: 5px solid var(--foreground-color);
     }
 
     &[aria-current="page"] {
-      border-bottom: 5px solid black;
+      border-bottom: 5px solid var(--foreground-color);
     }
   }
 }
 
 main {
-  --sb-track-color: #ffffff;
-  --sb-thumb-color: #000000;
+  --sb-track-color: var(--background-color);
+  --sb-thumb-color: var(--foreground-color);
   --sb-size: 40px;
 }
 
@@ -257,13 +329,12 @@ main::-webkit-scrollbar {
 
 main::-webkit-scrollbar-track {
   background: var(--sb-track-color);
-  border-radius: 1px;
 }
 
 main::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 1px;
-  border: 5px solid #ffffff;
+  border: 5px solid var(--sb-track-color);
 }
 
 @supports not selector(::-webkit-scrollbar) {
@@ -273,20 +344,20 @@ main::-webkit-scrollbar-thumb {
 }
 
 #contact_box {
-  border: 5px solid black;
+  border: 5px solid var(--foreground-color);
   margin: auto;
   width: 400px;
   font-size: 1.5em;
 
-  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
-  -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 0px 0px var(--foreground-color);
+  -moz-box-shadow: 5px 5px 0px 0px var(--foreground-color);
+  -webkit-box-shadow: 5px 5px 0px 0px var(--foreground-color);
 
   h3 {
     padding: 0.2em;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid var(--foreground-color);
   }
 
   address {
@@ -304,7 +375,7 @@ main::-webkit-scrollbar-thumb {
 
       &:hover {
         text-decoration: none;
-        border-bottom: 5px solid black;
+        border-bottom: 5px solid var(--foreground-color);
       }
     }
   }
@@ -321,14 +392,14 @@ main::-webkit-scrollbar-thumb {
         &:first-child {
           flex-basis: 60px;
 
-          border-top: 5px solid black;
-          border-right: 5px solid black;
+          border-top: 5px solid var(--foreground-color);
+          border-right: 5px solid var(--foreground-color);
           aspect-ratio: 1;
 
           div {
             height: 5px;
             width: 5px;
-            background-color: black;
+            background-color: var(--foreground-color);
           }
 
           div:nth-child(1) {
@@ -375,7 +446,7 @@ main::-webkit-scrollbar-thumb {
         &:last-child {
           flex-grow: 1;
           height: 5px;
-          background-color: black;
+          background-color: var(--foreground-color);
         }
       }
     }
@@ -384,9 +455,9 @@ main::-webkit-scrollbar-thumb {
       width: 100%;
       min-height: 12px;
 
-      background-color: white;
-      border-top: 5px solid black;
-      border-bottom: 5px solid black;
+      background-color: var(--backgroundground-color);
+      border-top: 5px solid var(--foreground-color);
+      border-bottom: 5px solid var(--foreground-color);
     }
   }
 }
