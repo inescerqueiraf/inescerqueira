@@ -7,112 +7,110 @@
   box-shadow: 5px 5px 0px 0px var(--foreground-color);
   -moz-box-shadow: 5px 5px 0px 0px var(--foreground-color);
   -webkit-box-shadow: 5px 5px 0px 0px var(--foreground-color);
+}
 
-  h3 {
-    padding: 0.2em;
-    text-align: center;
-    text-transform: uppercase;
-    border-bottom: 5px solid var(--foreground-color);
-  }
+#contact_box h3 {
+  padding: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 5px solid var(--foreground-color);
+}
 
-  address {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5em 1em;
-    margin-bottom: 2px;
-    text-transform: uppercase;
+#contact_box address {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 1em;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
 
-    & > a {
-      margin-top: 0.4em;
-      font-style: normal;
-      width: fit-content;
-      border-bottom: 5px solid transparent;
+#contact_box address > a {
+  margin-top: 0.4em;
+  font-style: normal;
+  width: fit-content;
+  border-bottom: 5px solid transparent;
+}
 
-      &:hover {
-        text-decoration: none;
-        border-bottom: 5px solid var(--foreground-color);
-      }
-    }
-  }
+#contact_box address > a:hover {
+  text-decoration: none;
+  border-bottom: 5px solid var(--foreground-color);
+}
 
-  & > div {
-    margin-bottom: 2px;
+#contact_box > div {
+  margin-bottom: 2px;
+}
 
-    &.folded-bottom {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: end;
+.folded-bottom {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: end;
+}
 
-      & > span {
-        &:first-child {
-          flex-basis: 60px;
+.folded-bottom > span:first-child {
+  flex-basis: 60px;
 
-          border-top: 5px solid var(--foreground-color);
-          border-right: 5px solid var(--foreground-color);
-          aspect-ratio: 1;
+  border-top: 5px solid var(--foreground-color);
+  border-right: 5px solid var(--foreground-color);
+  aspect-ratio: 1;
+}
 
-          div {
-            height: 5px;
-            width: 5px;
-            background-color: var(--foreground-color);
-          }
+.folded-bottom > span:first-child div {
+  height: 5px;
+  width: 5px;
+  background-color: var(--foreground-color);
+}
+.folded-bottom > span:first-child div:nth-child(1) {
+  position: relative;
+  transform: translateX(5px);
+}
+.folded-bottom > span:first-child div:nth-child(2) {
+  position: relative;
+  transform: translateX(10px);
+}
+.folded-bottom > span:first-child div:nth-child(3) {
+  position: relative;
+  transform: translateX(15px);
+}
+.folded-bottom > span:first-child div:nth-child(4) {
+  position: relative;
+  transform: translateX(20px);
+}
+.folded-bottom > span:first-child div:nth-child(5) {
+  position: relative;
+  transform: translateX(25px);
+}
+.folded-bottom > span:first-child div:nth-child(6) {
+  position: relative;
+  transform: translateX(30px);
+}
+.folded-bottom > span:first-child div:nth-child(7) {
+  position: relative;
+  transform: translateX(35px);
+}
+.folded-bottom > span:first-child div:nth-child(8) {
+  position: relative;
+  transform: translateX(40px);
+}
+.folded-bottom > span:first-child div:nth-child(9) {
+  position: relative;
+  transform: translateX(45px);
+}
+.folded-bottom > span:first-child div:nth-child(10) {
+  position: relative;
+  transform: translateX(50px);
+}
 
-          div:nth-child(1) {
-            position: relative;
-            transform: translateX(5px);
-          }
-          div:nth-child(2) {
-            position: relative;
-            transform: translateX(10px);
-          }
-          div:nth-child(3) {
-            position: relative;
-            transform: translateX(15px);
-          }
-          div:nth-child(4) {
-            position: relative;
-            transform: translateX(20px);
-          }
-          div:nth-child(5) {
-            position: relative;
-            transform: translateX(25px);
-          }
-          div:nth-child(6) {
-            position: relative;
-            transform: translateX(30px);
-          }
-          div:nth-child(7) {
-            position: relative;
-            transform: translateX(35px);
-          }
-          div:nth-child(8) {
-            position: relative;
-            transform: translateX(40px);
-          }
-          div:nth-child(9) {
-            position: relative;
-            transform: translateX(45px);
-          }
-          div:nth-child(10) {
-            position: relative;
-            transform: translateX(50px);
-          }
-        }
-        &:last-child {
-          flex-grow: 1;
-          height: 5px;
-          background-color: var(--foreground-color);
-        }
-      }
-    }
+.folded-bottom > span:last-child {
+  flex-grow: 1;
+  height: 5px;
+  background-color: var(--foreground-color);
+}
 
-    &:last-child {
-      width: 100%;
-      min-height: 12px;
+#contact_box > div:last-child {
+  width: 100%;
+  min-height: 12px;
 
-      background-color: var(--backgroundground-color);
-      border-top: 5px solid var(--foreground-color);
-      border-bottom: 5px solid var(--foreground-color);
-    }
-  }
+  background-color: var(--backgroundground-color);
+  border-top: 5px solid var(--foreground-color);
+  border-bottom: 5px solid var(--foreground-color);
 }
