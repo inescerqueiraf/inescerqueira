@@ -1,0 +1,13 @@
+---
+layout: base
+pagination:
+    data: projects
+    size: 1
+    alias: project
+permalink:  "projects/{{ project.fields.title | slugify }}/index.html"
+eleventyComputed: 
+    title: "{{ project.fields.title }}"
+---
+
+<p>{{ project.fields.title }}</p>
+<p>{{ project.fields.description }}</p>
