@@ -4,10 +4,39 @@ pagination:
     data: projects
     size: 1
     alias: project
-permalink:  "projects/{{ project.fields.title | slugify }}/index.html"
-eleventyComputed: 
+permalink: "projects/{{ project.fields.title | slugify }}/index.html"
+eleventyComputed:
     title: "{{ project.fields.title }}"
 ---
 
-<p>{{ project.fields.title }}</p>
-<p>{{ project.fields.description }}</p>
+<h2 id="project-title">{{ project.fields.title }}</h2>
+
+<div id="project-description">
+	<p>{{ project.fields.description | renderRichText }}</p>
+</div>
+
+<figure id="project-main-media">
+	<img src="{{ project.fields.mainMedia.fields.file.url }}?w=500" alt="{{ project.fields.mainMedia.fields.title }}" />
+	<figcaption>
+		<h3>{{ project.fields.mainMedia.fields.title }}</h3>
+	</figcaption>
+</figure>
+
+{% if project.fields.assets.length > 0 %}
+<section id="project-assets">
+	{% for asset in project.fields.assets %}
+	<figure>
+		<img src="{{ asset.fields.file.url }}?w=500" alt="{{ asset.fields.title }}" />
+	</figure>
+	{% endfor %}
+</section>
+{% endif %}
+
+{% if project.fields.qrCode != undefined %}
+<figure id="project-qr-code">
+	<img src="{{ project.fields.qrCode.fields.file.url }}?w=500" alt="{{ project.fields.qrCode.fields.title }}" />
+	<figcaption>
+		<h3>{{ project.fields.qrCode.fields.title | default: "QR Code" }}</h3>
+	</figcaption>
+</figure>
+{% endif %}

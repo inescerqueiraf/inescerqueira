@@ -1,3 +1,5 @@
+const { documentToHtmlString } = require("@contentful/rich-text-html-renderer");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "assets/font": "font",
@@ -94,4 +96,8 @@ module.exports = function (eleventyConfig) {
     `;
     }
   });
+
+  eleventyConfig.addFilter("renderRichText", (value) =>
+    documentToHtmlString(value)
+  );
 };
