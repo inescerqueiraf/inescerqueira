@@ -4,6 +4,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "assets/font": "font",
   });
+  eleventyConfig.addPassthroughCopy({
+    "assets/favicons": "favicons",
+  });
 
   // Watch targets
   eleventyConfig.addWatchTarget("./styles");

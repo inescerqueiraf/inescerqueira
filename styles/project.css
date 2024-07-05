@@ -63,6 +63,11 @@ section#project-assets figure img {
   object-fit: contain;
 }
 
+section#project-assets figure figcaption {
+  text-transform: uppercase;
+  text-align: center;
+}
+
 figure#project-qr-code img {
   display: flex;
   margin: auto;

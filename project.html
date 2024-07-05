@@ -34,7 +34,7 @@ eleventyComputed:
 <section id="project-assets">
 	{% for asset in project.fields.assets %}
 	<figure>
-		<img src="{{ asset.fields.file.url }}?w=750" alt="{{ asset.fields.title }}" />
+		<img src="{{ asset.fields.file.url }}?w=750" alt="{{ asset.fields.title }}" loading="lazy"/>
 		<figcaption>
 			<h3>{{ asset.fields.title }}</h3>
 		</figcaption>
