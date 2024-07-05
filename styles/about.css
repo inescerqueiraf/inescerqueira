@@ -5,6 +5,7 @@
 }
 
 #about-me-box {
+  position: relative;
   border: 5px solid var(--foreground-color);
   margin: auto;
   width: 400px;
@@ -24,6 +25,30 @@
 
 #about-me-box > div {
   margin-bottom: 2px;
+}
+
+#about-me-box #curriculum-vitae {
+  position: absolute;
+  border: 5px solid var(--foreground-color);
+  margin: 0 auto;
+  min-width: fit-content;
+  padding: 5px 8px;
+  font-size: 1.4em;
+
+  right: 10px;
+  bottom: 29px;
+}
+
+#about-me-box #curriculum-vitae:hover {
+  box-shadow: 5px 5px 0px 0px var(--foreground-color);
+  -moz-box-shadow: 5px 5px 0px 0px var(--foreground-color);
+  -webkit-box-shadow: 5px 5px 0px 0px var(--foreground-color);
+
+  transform: translate(-5px, -5px);
+}
+
+#about-me-box #curriculum-vitae a:hover {
+  text-decoration: none;
 }
 
 #about-me-box > div:last-child {

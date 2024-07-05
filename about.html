@@ -11,9 +11,12 @@ date: 2024-05-24
 			alt="{{ about.fields.aboutMeMedia.fields.title }}" />
 
 		<div id="about-me-box">
-			<p>
 				{{ about.fields.aboutMe | renderRichText }}
-			</p>
+			{% if about.fields.curriculumVitae %}
+			<div id="curriculum-vitae">
+				<a href="{{ about.fields.curriculumVitae.fields.file.url }}" target="_blank">CURRICULUM VITAE</a>
+			</div>
+			{% endif %}
 			<div class="folded-bottom">
 				<span>
 					<div></div>
