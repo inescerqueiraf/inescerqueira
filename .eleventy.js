@@ -7,6 +7,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "assets/favicons": "favicons",
   });
+  eleventyConfig.addPassthroughCopy({
+    "assets/welcome_page.gif": "welcome_page.gif",
+  });
 
   // Watch targets
   eleventyConfig.addWatchTarget("./styles");

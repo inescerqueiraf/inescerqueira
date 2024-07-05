@@ -74,6 +74,32 @@ main::after {
   justify-content: center;
 }
 
+#welcome_page_gif {
+  display: flex;
+  align-items: center;
+  height: 90%;
+  max-height: 100%;
+  width: fit-content;
+}
+
+#welcome_page_gif > a {
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#welcome_page_gif > a > img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+html.dark-mode #welcome_page_gif > a > img {
+  /* Done through: https://angel-rs.github.io/css-color-filter-generator/ */
+  filter: brightness(0) saturate(100%) invert(79%) sepia(65%) saturate(385%)
+    hue-rotate(20deg) brightness(115%) contrast(107%);
+}
+
 a:link {
   color: var(--foreground-color);
   text-decoration: none;
