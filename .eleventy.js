@@ -98,7 +98,9 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("renderRichText", (value) =>
-    documentToHtmlString(value)
+    documentToHtmlString(value, {
+      preserveWhitespace: true,
+    })
   );
 
   eleventyConfig.addFilter("isVideo", function (contentType) {

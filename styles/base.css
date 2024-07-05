@@ -95,61 +95,68 @@ a:visited {
   text-decoration: underline;
 }
 
-#selected_tab {
-  text-decoration: underline;
-}
-
-#gallery {
+.folded-bottom {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2%;
-  justify-content: flex-start;
-  padding-top: 3%;
-  padding-right: 20%;
-  align-content: space-around;
+  flex-wrap: nowrap;
+  align-items: end;
 }
 
-figcaption > h3 {
-  /*
-    width: fit-content;
-    
-    */
-  text-transform: uppercase;
-  text-align: center;
+.folded-bottom > span:first-child {
+  flex-basis: 60px;
+
+  border-top: 5px solid var(--foreground-color);
+  border-right: 5px solid var(--foreground-color);
+  aspect-ratio: 1;
 }
 
-a figure {
-  flex-basis: 25%;
-  text-align: center;
+.folded-bottom > span:first-child div {
+  height: 5px;
+  width: 5px;
+  background-color: var(--foreground-color);
+}
+.folded-bottom > span:first-child div:nth-child(1) {
+  position: relative;
+  transform: translateX(5px);
+}
+.folded-bottom > span:first-child div:nth-child(2) {
+  position: relative;
+  transform: translateX(10px);
+}
+.folded-bottom > span:first-child div:nth-child(3) {
+  position: relative;
+  transform: translateX(15px);
+}
+.folded-bottom > span:first-child div:nth-child(4) {
+  position: relative;
+  transform: translateX(20px);
+}
+.folded-bottom > span:first-child div:nth-child(5) {
+  position: relative;
+  transform: translateX(25px);
+}
+.folded-bottom > span:first-child div:nth-child(6) {
+  position: relative;
+  transform: translateX(30px);
+}
+.folded-bottom > span:first-child div:nth-child(7) {
+  position: relative;
+  transform: translateX(35px);
+}
+.folded-bottom > span:first-child div:nth-child(8) {
+  position: relative;
+  transform: translateX(40px);
+}
+.folded-bottom > span:first-child div:nth-child(9) {
+  position: relative;
+  transform: translateX(45px);
+}
+.folded-bottom > span:first-child div:nth-child(10) {
+  position: relative;
+  transform: translateX(50px);
 }
 
-a figure img {
-  width: 50%;
-}
-
-#profilepic {
-  width: 8em;
-}
-
-#notes {
-  /*ver isto*/
-  width: 300px;
-}
-
-#aboutme_box {
-  border: 5px solid var(--foreground-color);
-  margin-left: 35em;
-  width: 378px;
-
-  box-shadow: 5px 5px 0px 0px var(--foreground-color);
-}
-
-#aboutme_box > p {
-  padding: 0.5em 1em;
-  border-bottom: 5px solid var(--foreground-color);
-  margin-bottom: 2px;
-  text-transform: uppercase;
-  margin: 0.5em 0;
-  font-size: large;
-  font-style: normal;
+.folded-bottom > span:last-child {
+  flex-grow: 1;
+  height: 5px;
+  background-color: var(--foreground-color);
 }
