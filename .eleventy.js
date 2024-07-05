@@ -100,4 +100,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("renderRichText", (value) =>
     documentToHtmlString(value)
   );
+
+  eleventyConfig.addFilter("isVideo", function (contentType) {
+    return contentType.startsWith("video");
+  });
 };
